@@ -38,5 +38,7 @@
     - widgets/brand-logo-descriptor.yaml
     - widgets/breadcrumb-descriptor.yaml
     </code></pre>
+
+    <@wp.show frame=0 />
 </body>
 </html>
