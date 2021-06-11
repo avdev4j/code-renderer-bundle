@@ -1,0 +1,7 @@
+code: code-renderer
+description: Code renderer bundle
+components:
+  fragments:
+    - fragments/highlightjs_cdn_inclusions-descriptor.yaml
+  pageModels:
+    - pageModels/code_rendering-descriptor.yaml
