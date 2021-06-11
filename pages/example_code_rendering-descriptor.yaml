@@ -1,0 +1,16 @@
+code: example_code_rendering
+parentCode: homepage
+titles:
+  en: Example code rendering
+  it: Example code rendering
+pageModel: code_rendering
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published
+widgets:
+  - code: Sample_code_render
+    config: null
+    pos: 0

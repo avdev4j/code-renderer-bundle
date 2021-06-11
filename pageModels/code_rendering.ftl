@@ -13,32 +13,6 @@
     <@wp.fragment code="highlightjs_cdn_inclusions" escapeXml=false />
 </head>
 <body>
-    <pre><code class="language-js">
-    get initializing() {
-    const phaseFromJHipster = super._initializing();
-    return {
-        ...phaseFromJHipster,
-        setupConfigQuarkus() {
-            const context = this.context;
-            if (!context.useConfigurationFile) {
-                context.dataAccess = constants.DEFAULT_DATA_ACCESS;
-            } else {
-                context.dataAccess = context.fileData ? context.fileData.dataAccess : constants.DEFAULT_DATA_ACCESS;
-            }
-        },
-    };
-    }
-    </code></pre>
-
-    <pre><code class="language-yaml">
-    code: standard-demo
-    description: Standard Demo bundle
-    components:
-    widgets:
-    - widgets/brand-logo-descriptor.yaml
-    - widgets/breadcrumb-descriptor.yaml
-    </code></pre>
-
     <@wp.show frame=0 />
 </body>
 </html>

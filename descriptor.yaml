@@ -5,3 +5,7 @@ components:
     - fragments/highlightjs_cdn_inclusions-descriptor.yaml
   pageModels:
     - pageModels/code_rendering-descriptor.yaml
+  widgets:
+    - widgets/code_sample_render-descriptor.yaml
+  pages:
+    - pages/example_code_rendering-descriptor.yaml
