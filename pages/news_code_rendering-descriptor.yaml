@@ -1,0 +1,12 @@
+code: news_code_rendering
+parentCode: my_homepage
+titles:
+  en: News with code rendering
+  it: New with code rendering
+pageModel: content_page_with_code
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published

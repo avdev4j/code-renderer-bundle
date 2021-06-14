@@ -1,0 +1,97 @@
+code: content_page_with_code
+description: Content page with code
+templatePath: code_rendering.ftl
+configuration:
+  frames:
+    - pos: 0
+      descr: Logo
+      mainFrame: false
+      defaultWidget:
+        code: logo
+        properties:
+      sketch:
+        x1: 0
+        y1: 0
+        x2: 2
+        y2: 0
+    - pos: 1
+      descr: Navigation bar
+      mainFrame: false
+      defaultWidget:
+        code: navigation-menu
+        properties:
+      sketch:
+        x1: 3
+        y1: 0
+        x2: 5
+        y2: 0
+    - pos: 2
+      descr: Search
+      mainFrame: false
+      defaultWidget:
+        code: search_form
+        properties:
+      sketch:
+        x1: 6
+        y1: 0
+        x2: 8
+        y2: 0
+    - pos: 3
+      descr: Login
+      mainFrame: false
+      defaultWidget:
+        code: keycloak-login
+        properties:
+      sketch:
+        x1: 9
+        y1: 0
+        x2: 11
+        y2: 0
+    - pos: 4
+      descr: Content Frame
+      mainFrame: true
+      defaultWidget:
+        code: content_viewer
+        properties:
+          modelId: '10002'
+      sketch:
+        x1: 0
+        y1: 1
+        x2: 11
+        y2: 1
+    - pos: 5
+      descr: Frame 2
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 2
+        x2: 11
+        y2: 2
+    - pos: 6
+      descr: Frame 3
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 3
+        x2: 11
+        y2: 3
+    - pos: 7
+      descr: Frame 4
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 4
+        x2: 11
+        y2: 4
+    - pos: 8
+      descr: Footer
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 5
+        x2: 11
+        y2: 5

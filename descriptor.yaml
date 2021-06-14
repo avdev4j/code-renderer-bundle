@@ -4,8 +4,6 @@ components:
   fragments:
     - fragments/highlightjs_cdn_inclusions-descriptor.yaml
   pageModels:
-    - pageModels/code_rendering-descriptor.yaml
-  widgets:
-    - widgets/code_sample_render-descriptor.yaml
+    - pageModels/content_page_with_code-descriptor.yaml
   pages:
-    - pages/example_code_rendering-descriptor.yaml
+    - pages/news_code_rendering-descriptor.yaml
