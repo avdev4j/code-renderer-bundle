@@ -48,7 +48,7 @@ configuration:
         x2: 11
         y2: 0
     - pos: 4
-      descriptioniption: Content Frame
+      description: Content Frame
       mainFrame: true
       defaultWidget:
         code: content_viewer
