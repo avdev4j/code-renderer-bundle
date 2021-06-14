@@ -1,6 +1,6 @@
 code: content_page_with_code
 description: Content page with code
-templatePath: code_rendering.ftl
+templatePath: content-page-with-code.ftl
 configuration:
   frames:
     - pos: 0
