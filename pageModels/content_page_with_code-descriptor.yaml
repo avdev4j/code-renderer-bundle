@@ -4,7 +4,7 @@ templatePath: code_rendering.ftl
 configuration:
   frames:
     - pos: 0
-      descr: Logo
+      description: Logo
       mainFrame: false
       defaultWidget:
         code: logo
@@ -15,7 +15,7 @@ configuration:
         x2: 2
         y2: 0
     - pos: 1
-      descr: Navigation bar
+      description: Navigation bar
       mainFrame: false
       defaultWidget:
         code: navigation-menu
@@ -26,7 +26,7 @@ configuration:
         x2: 5
         y2: 0
     - pos: 2
-      descr: Search
+      description: Search
       mainFrame: false
       defaultWidget:
         code: search_form
@@ -37,7 +37,7 @@ configuration:
         x2: 8
         y2: 0
     - pos: 3
-      descr: Login
+      description: Login
       mainFrame: false
       defaultWidget:
         code: keycloak-login
@@ -48,7 +48,7 @@ configuration:
         x2: 11
         y2: 0
     - pos: 4
-      descr: Content Frame
+      descriptioniption: Content Frame
       mainFrame: true
       defaultWidget:
         code: content_viewer
@@ -60,7 +60,7 @@ configuration:
         x2: 11
         y2: 1
     - pos: 5
-      descr: Frame 2
+      description: Frame 2
       mainFrame: false
       defaultWidget:
       sketch:
@@ -69,7 +69,7 @@ configuration:
         x2: 11
         y2: 2
     - pos: 6
-      descr: Frame 3
+      description: Frame 3
       mainFrame: false
       defaultWidget:
       sketch:
@@ -78,7 +78,7 @@ configuration:
         x2: 11
         y2: 3
     - pos: 7
-      descr: Frame 4
+      description: Frame 4
       mainFrame: false
       defaultWidget:
       sketch:
@@ -87,7 +87,7 @@ configuration:
         x2: 11
         y2: 4
     - pos: 8
-      descr: Footer
+      description: Footer
       mainFrame: false
       defaultWidget:
       sketch:
