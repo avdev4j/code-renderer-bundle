@@ -12,20 +12,20 @@ charset: utf-8
 status: published
 widgets:
   - code: logo
-      config: null
-      pos: 0
+    config: null
+    pos: 0
   - code: navigation-menu
-      config: null
-      pos: 1
+    config: null
+    pos: 1
   - code: search_form
-      config: null
-      pos: 2
+    config: null
+    pos: 2
   - code: keycloak-login
-      config: null
-      pos: 3
+    config: null
+    pos: 3
   - code: content_viewer
-      config: null
-      pos: 4
+    config: null
+    pos: 4
   - code: navigation-menu
-      config: null
-      pos: 8
+    config: null
+    pos: 8
