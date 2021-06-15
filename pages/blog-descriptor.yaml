@@ -26,6 +26,8 @@ widgets:
   - code: content_viewer_list
     config:
       contentType: NWS
+      modelId: '10021'
+      maxElements: 5
     pos: 4
   - code: navigation-menu
     config: null
