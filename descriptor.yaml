@@ -2,7 +2,7 @@ code: code-renderer
 description: Code renderer bundle
 components:
   fragments:
-    - fragments/highlightjs_cdn_inclusions-descriptor.yaml
+    - fragments/prism_cdn_inclusions-descriptor.yaml
   pageModels:
     - pageModels/content_page_with_code-descriptor.yaml
   pages:
