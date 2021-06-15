@@ -1,7 +1,0 @@
-code: highlightjs_cdn_inclusions
-guiCode: '
-<#assign wp=JspTaglibs["/aps-core"]>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/atom-one-dark-reasonable.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-'
