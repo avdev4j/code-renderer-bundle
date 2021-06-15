@@ -24,7 +24,8 @@ widgets:
     config: null
     pos: 3
   - code: content_viewer_list
-    config: null
+    config:
+      contentType: NWS
     pos: 4
   - code: navigation-menu
     config: null
