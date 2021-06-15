@@ -1,9 +1,9 @@
-code: news_code_rendering
-parentCode: my_homepage
+code: blog
+parentCode: homepage
 titles:
-  en: News with code rendering
-  it: New with code rendering
-pageModel: content_page_with_code
+  en: Blog
+  it: Blog
+pageModel: 1-column
 ownerGroup: free
 joinGroups: []
 displayedInMenu: true
@@ -23,7 +23,7 @@ widgets:
   - code: keycloak-login
     config: null
     pos: 3
-  - code: content_viewer
+  - code: content_viewer_list
     config: null
     pos: 4
   - code: navigation-menu
