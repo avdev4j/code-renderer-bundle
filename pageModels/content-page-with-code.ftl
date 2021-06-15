@@ -19,7 +19,7 @@
             <link rel="stylesheet" type="text/css" href="<@wp.cssURL /><@wp.printHeadInfo />" />
         </@wp.outputHeadInfo>
 
-        <@wp.fragment code="prism_cdn_inclusions" escapeXml=false />
+        <@wp.fragment code="prismjs_cdn_inclusions" escapeXml=false />
         </head>
         <body>
           <header-fragment app-url="${appUrl}">

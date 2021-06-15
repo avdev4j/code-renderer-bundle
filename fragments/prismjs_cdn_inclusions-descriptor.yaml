@@ -1,4 +1,4 @@
-code: prism_cdn_inclusions
+code: prismjs_cdn_inclusions
 guiCode: '
 <#assign wp=JspTaglibs["/aps-core"]>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"/>
