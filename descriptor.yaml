@@ -4,7 +4,7 @@ components:
   fragments:
     - fragments/prismjs_cdn_inclusions-descriptor.yaml
   pageModels:
-    - pageModels/blog-descriptor.yaml
-    - pageModels/blog_details-descriptor.yaml
+    - pageModels/content_page_with_code-descriptor.yaml
   pages:
-    - pages/news_code_rendering-descriptor.yaml
+    - pages/blog-descriptor.yaml
+    - pages/blog_details-descriptor.yaml
