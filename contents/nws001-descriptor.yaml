@@ -45,7 +45,7 @@ attributes:
     elements: []
     compositeelements: []
     listelements: {}
-  - code: img
+  - code: image
     value: null
     values:
       en:
@@ -54,22 +54,15 @@ attributes:
     elements: []
     compositeelements: []
     listelements: {}
-  - code: links
-    value: null
+  - code: link
+    value:
+      urlDest: 'http://www.jhipster.tech/'
+      pageDest: null
+      contentDest: null
+      resourceDest: null
+      symbolicDestination: '#!U;http://www.jhipster.tech/!#'
+      destType: 1
     values: {}
-    elements:
-      - code: links
-        value:
-          urlDest: 'http://www.jhipster.tech/'
-          pageDest: null
-          contentDest: null
-          resourceDest: null
-          symbolicDestination: '#!U;http://www.jhipster.tech/!#'
-          destType: 1
-        values:
-          en: JHipster website
-        elements: []
-        compositeelements: []
-        listelements: {}
+    elements: []
     compositeelements: []
     listelements: {}
