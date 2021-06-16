@@ -6,10 +6,6 @@ status: PUBLIC
 attributes:
   - code: date
     value: '2020-04-23 00:00:00'
-    values: {}
-    elements: []
-    compositeelements: []
-    listelements: {}
   - code: title
     value: null
     values:
