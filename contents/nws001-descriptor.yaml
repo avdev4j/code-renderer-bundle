@@ -5,6 +5,12 @@ mainGroup: free
 status: PUBLIC
 attributes:
   - code: title
+    value: 06/16/2021
+    values: []
+    elements: [ ]
+    compositeelements: [ ]
+    listelements: { }
+  - code: title
     value: null
     values:
       en: "JHipster: What's Under the Hood?"
