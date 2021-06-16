@@ -6,7 +6,6 @@ status: PUBLIC
 attributes:
   - code: date
     value: '2020-04-23 00:00:00'
-    format:
     values: {}
     elements: []
     compositeelements: []
