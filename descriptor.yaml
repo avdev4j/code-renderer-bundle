@@ -6,5 +6,8 @@ components:
   pageModels:
     - pageModels/content_page_with_code-descriptor.yaml
   pages:
-    - pages/blog-descriptor.yaml
     - pages/blog_details-descriptor.yaml
+  contents:
+    - contents/nws001-descriptor.yaml
+  assets:
+    - assets/jhipster-logo/jhipster_logo-descriptor.yaml
