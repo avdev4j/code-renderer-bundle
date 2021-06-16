@@ -4,7 +4,7 @@ description: Introduction to JHipster 7 article
 mainGroup: free
 status: PUBLIC
 attributes:
-  - code: title
+  - code: date
     value: 06/16/2021
     values: {}
     elements: []
