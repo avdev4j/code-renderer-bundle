@@ -1,0 +1,69 @@
+id: NWS001
+typeCode: NWS
+description: Introduction to JHipster 7 article
+mainGroup: free
+status: PUBLIC
+attributes:
+  - code: title
+    value: null
+    values:
+      en: "JHipster: What's Under the Hood?"
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: abstract
+    value: null
+    values:
+      en: |
+        <p>JHipster 7 has been released! This is a BIG major version update. Here are our favorite features.</p>
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: body
+    value: null
+    values:
+      en: |
+        Hi, my fellow hipsters!
+
+        I know you’ve been waiting for this announcement for a long time. JHipster 7 has been released! This is a BIG major version so I can’t promise to cover every detail in the release, but I’d like to share my favorite features with you.
+
+        Let’s go for a quick overview.
+
+        A few numbers to start
+        22 months have passed since the last major release has been made
+        25 intermediate releases, one release every 3.5 weeks
+        3833 commits have been merged
+        2371 tickets/PR have been closed
+        18.2k GitHub stars and 613 contributors
+        The v7 release is for sure the biggest release made by the community.
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: img
+    value: null
+    values:
+      en:
+        correlationCode: '1'
+        name: jhi_logo.png
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: links
+    value: null
+    values: {}
+    elements:
+      - code: links
+        value:
+          urlDest: 'http://www.jhipster.tech/'
+          pageDest: null
+          contentDest: null
+          resourceDest: null
+          symbolicDestination: '#!U;http://www.jhipster.tech/!#'
+          destType: 1
+        values:
+          en: JHipster website
+        elements: []
+        compositeelements: []
+        listelements: {}
+    compositeelements: []
+    listelements: {}
