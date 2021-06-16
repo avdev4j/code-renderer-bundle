@@ -5,8 +5,9 @@ mainGroup: free
 status: PUBLIC
 attributes:
   - code: date
-    value: 06/16/21
-    values: {}
+    value: null
+    values:
+      en: 06/16/21
     elements: []
     compositeelements: []
     listelements: {}
