@@ -1,5 +1,5 @@
 code: blog_details
-parentCode: blog
+parentCode: homepage
 titles:
   en: Blog details
   it: Blog details
@@ -24,7 +24,9 @@ widgets:
     config: null
     pos: 3
   - code: content_viewer
-    config: null
+    config:
+      contentId: 'NWS001'
+      modelId: 10002
     pos: 4
   - code: navigation-menu
     config: null
