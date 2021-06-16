@@ -54,15 +54,3 @@ attributes:
     elements: []
     compositeelements: []
     listelements: {}
-  - code: link
-    value:
-      urlDest: 'http://www.jhipster.tech/'
-      pageDest: null
-      contentDest: null
-      resourceDest: null
-      symbolicDestination: '#!U;http://www.jhipster.tech/!#'
-      destType: 1
-    values: {}
-    elements: []
-    compositeelements: []
-    listelements: {}
