@@ -32,7 +32,7 @@ take fragments
 touch prismjs_cdn_inclusions-descriptor.yaml
 ```
 Add the prismjs imports descriptor (command `prismFragment` in Intellij) 
-``` html
+``` yaml
 code: prismjs_cdn_inclusions
 guiCode: '
 <#assign wp=JspTaglibs["/aps-core"]>
@@ -43,5 +43,9 @@ guiCode: '
 ```
 
 ## Update the main descriptor
-Add the fragments section in the main descriptor
+Add the fragments section in the main descriptor fragments (command `baseDescriptorFragments` in Intellij):
+``` yaml
+fragments:
+    - fragments/prismjs_cdn_inclusions-descriptor.yaml
+```
 
