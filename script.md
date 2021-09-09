@@ -48,3 +48,8 @@ fragments:
     - fragments/prismjs_cdn_inclusions-descriptor.yaml
 ```
 
+# Publish the bundle
+In the parent folder `code-renderer-bundle-parent` run the following command to publish the bundle to the Git repository
+```
+ent prj pbs-init
+```
