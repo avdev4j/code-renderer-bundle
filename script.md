@@ -45,7 +45,7 @@ guiCode: '
 Start by creating the main descriptor.
 ``` bash
 cd ..
-touch descriptor.yml
+touch descriptor.yaml
 ```
 In it add the following (command `baseDescriptor` in IntelliJ)
 ```
@@ -60,6 +60,7 @@ Add the fragments section in the main descriptor fragments (command `baseDescrip
 ```
 
 # Publish the bundle
+## Configure the publication system
 From the parent folder `code-renderer-bundle-parent` run the following command to publish the bundle to the Git repository
 ```
 ent prj pbs-init
@@ -73,4 +74,22 @@ Please provide the git email: ***@entando.com
 Initialized empty Git repository in /private/tmp/code-renderer-bundle-parent/bundle/.git/
 Should I enable the credentials cache for the publication of the frontend? (y/n/q) y
 Expiration in seconds? (86400):
+```
+## Publish on GitHub
+Run the command
+```
+ent prj pbs-publish
+```
+Provide a number version (add the 'v' prefix to follow the Git tag pattern)
+```
+~~~
+➤ [I] | 2021-09-10 17-24-55 | Publishing the frontend to git
+Please provide the bundle version number: v0.0.1
+Please provide the bundle version comment (v0.0.1  - 2021-09-10T15:25:06+0000): the first version
+[master 71a299a] the first version
+ 2 files changed, 7 insertions(+)
+ create mode 100644 descriptor.yml
+ create mode 100644 fragments/prismjs_cdn_inclusions-descriptor.yaml
+➤ [I] | 2021-09-10 17-25-14 | Version v0.0.1 published
+~~~
 ```
