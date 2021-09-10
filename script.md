@@ -64,3 +64,13 @@ From the parent folder `code-renderer-bundle-parent` run the following command t
 ```
 ent prj pbs-init
 ```
+Then answer the question by providing the HTTPS Git repository link, your name and your email.
+For the others, leave the default values.
+```
+Please provide the URL of the publication repository: https://github.com/avdev4j/code-renderer-bundle-test.git
+Please provide the git user name: avdev4j
+Please provide the git email: ***@entando.com
+Initialized empty Git repository in /private/tmp/code-renderer-bundle-parent/bundle/.git/
+Should I enable the credentials cache for the publication of the frontend? (y/n/q) y
+Expiration in seconds? (86400):
+```
