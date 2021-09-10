@@ -1,15 +1,22 @@
 # Initiate the bundle
 Start by creating the parent folder
 ``` bash
-take code-renderer-bundle-parent
+mkdir code-renderer-bundle-parent && cd code-renderer-bundle-parent
 ```
-and the bundle folder
-``` bash
-take bundle
-```
-init the ent project
+
+Initialize the project
 ``` bash
 ent prj init
+```
+
+Fill the project name, and remove the `-parent` suffix.
+```
+Please provide the project name (code-renderer-bundle-parent): code-renderer-bundle
+```
+
+Create the bundle folder
+``` bash
+mkdir bundle && cd bundle
 ```
 
 # Add the first component
