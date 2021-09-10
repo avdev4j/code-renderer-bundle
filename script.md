@@ -23,10 +23,13 @@ mkdir bundle && cd bundle
 
 ## prismjs fragment
 ``` bash
-take fragments
+mkdir fragments && cd fragments
 ```
 ``` bash
 touch prismjs_cdn_inclusions-descriptor.yaml
+```
+``` bash
+vi prismjs_cdn_inclusions-descriptor.yaml
 ```
 Add the prismjs imports descriptor (command `prismFragment` in Intellij) 
 ``` yaml
@@ -41,6 +44,7 @@ guiCode: '
 ## main descriptor
 Start by creating the main descriptor.
 ``` bash
+cd ..
 touch descriptor.yml
 ```
 In it add the following (command `baseDescriptor` in IntelliJ)
@@ -51,12 +55,12 @@ components:
 ```
 Add the fragments section in the main descriptor fragments (command `baseDescriptorFragments` in Intellij):
 ``` yaml
-fragments:
+  fragments:
     - fragments/prismjs_cdn_inclusions-descriptor.yaml
 ```
 
 # Publish the bundle
-In the parent folder `code-renderer-bundle-parent` run the following command to publish the bundle to the Git repository
+From the parent folder `code-renderer-bundle-parent` run the following command to publish the bundle to the Git repository
 ```
 ent prj pbs-init
 ```
