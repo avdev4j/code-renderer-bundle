@@ -20,7 +20,6 @@ mkdir bundle && cd bundle
 ```
 
 # Add the first component
-
 ## prismjs fragment
 ``` bash
 mkdir fragments && cd fragments
@@ -93,3 +92,169 @@ Please provide the bundle version comment (v0.0.1  - 2021-09-10T15:25:06+0000): 
 ➤ [I] | 2021-09-10 17-25-14 | Version v0.0.1 published
 ~~~
 ```
+
+# Add Pages components
+## Create a PageModel
+From the parent folder
+``` bash
+mkdir pageModels && cd pageModels
+```
+Create the descriptor
+``` bash
+touch content_page_with_code-descriptor.yaml
+```
+Add the descriptor Content (`pageModel` live template in Intellij)
+``` yaml
+code: content_page_with_code
+description: Content page with code
+templatePath: content-page-with-code.ftl
+configuration:
+  frames:
+    - pos: 0
+      description: Logo
+      mainFrame: false
+      defaultWidget:
+        code: logo
+        properties:
+      sketch:
+        x1: 0
+        y1: 0
+        x2: 2
+        y2: 0
+    - pos: 1
+      description: Navigation bar
+      mainFrame: false
+      defaultWidget:
+        code: navigation-menu
+        properties:
+      sketch:
+        x1: 3
+        y1: 0
+        x2: 5
+        y2: 0
+    - pos: 2
+      description: Search
+      mainFrame: false
+      defaultWidget:
+        code: search_form
+        properties:
+      sketch:
+        x1: 6
+        y1: 0
+        x2: 8
+        y2: 0
+    - pos: 3
+      description: Login
+      mainFrame: false
+      defaultWidget:
+        code: keycloak-login
+        properties:
+      sketch:
+        x1: 9
+        y1: 0
+        x2: 11
+        y2: 0
+    - pos: 4
+      description: Content Frame
+      mainFrame: true
+      defaultWidget:
+        code: content_viewer
+        properties:
+          modelId: '10002'
+      sketch:
+        x1: 0
+        y1: 1
+        x2: 11
+        y2: 1
+    - pos: 5
+      description: Frame 2
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 2
+        x2: 11
+        y2: 2
+    - pos: 6
+      description: Frame 3
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 3
+        x2: 11
+        y2: 3
+    - pos: 7
+      description: Frame 4
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 4
+        x2: 11
+        y2: 4
+    - pos: 8
+      description: Footer
+      mainFrame: false
+      defaultWidget:
+      sketch:
+        x1: 0
+        y1: 5
+        x2: 11
+        y2: 5
+```
+Create the Freemarker template
+``` bash
+touch content-page-with-code.ftl
+```
+Add the ftl content (`pageModelFtl` in intellij)
+```
+<#assign wp=JspTaglibs["/aps-core"]>
+<@wp.info key="systemParam" paramName="applicationBaseURL" var="appUrl" />
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            <@wp.currentPage param="title" />
+        </title>
+        <meta name="viewport" content="width=device-width,  user-scalable=no" />
+        <link rel="icon" href="${appUrl}favicon.png" type="image/png" />
+        <!-- Custom OOTB page template styles -->
+        <link rel="stylesheet" href="<@wp.resourceURL />static/css/ootb/page-templates/index.css" rel="stylesheet">
+        <!-- Carbon Design System -->
+        <@wp.fragment code="entando_ootb_carbon_include" escapeXml=false />
+        <@wp.fragment code="keycloak_auth" escapeXml=false />
+
+        <@wp.outputHeadInfo type="CSS">
+            <link rel="stylesheet" type="text/css" href="<@wp.cssURL /><@wp.printHeadInfo />" />
+        </@wp.outputHeadInfo>
+
+        <@wp.fragment code="prismjs_cdn_inclusions" escapeXml=false />
+        </head>
+        <body>
+          <header-fragment app-url="${appUrl}">
+            <template>
+                <@wp.show frame=0 />
+                <@wp.show frame=1 />
+                <@wp.show frame=2 />
+                <@wp.show frame=3 />
+            </template>
+          </header-fragment>
+          <div class="bx--grid Homepage__body">
+            <div class="bx--row"><@wp.show frame=4 /></div>
+            <div class="bx--row"><@wp.show frame=5 /></div>
+            <div class="bx--row"><@wp.show frame=6 /></div>
+            <div class="bx--row"><@wp.show frame=7 /></div>
+          </div>
+          <div class="Homepage__footer"><@wp.show frame=8 /></div>
+        </body>
+</html>
+```
+
+Declare the pageModel in the main descriptor (`baseDescriptorFragments` in intellij)
+```
+  pageModels:
+    - pageModels/content_page_with_code-descriptor.yaml
+```
+
