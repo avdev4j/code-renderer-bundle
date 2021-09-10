@@ -258,3 +258,10 @@ Declare the pageModel in the main descriptor (`baseDescriptorFragments` in intel
     - pageModels/content_page_with_code-descriptor.yaml
 ```
 
+## Create the content
+## create the page 
+# Deploy a new version
+```
+ent prj pbs-publish
+```
+## Install the bundle
