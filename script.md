@@ -259,6 +259,103 @@ Declare the pageModel in the main descriptor (`baseDescriptorFragments` in intel
 ```
 
 ## Create the content
+Create the contents folder
+``` bash
+mkdir contents && cd contents
+```
+
+Create the news descriptor
+```
+touch nws001-descriptor.yaml
+```
+
+Add the news content without body (`nws-desc` in intellij)
+```
+id: NWS001
+typeCode: NWS
+description: "JHipster: What's Under the Hood?"
+mainGroup: free
+status: PUBLIC
+attributes:
+  - code: date
+    value: '2020-04-23 00:00:00'
+  - code: title
+    value: null
+    values:
+      en: "JHipster: What's Under the Hood?"
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: abstract
+    value: null
+    values:
+      en: |
+        <p>JHipster 7 has been released! This is a BIG major version update. Here are our favorite features.</p>
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: body
+    value: null
+    values:
+      en:
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: image
+    value: null
+    values:
+      en:
+        correlationCode: '1'
+        name: jhi_logo.png
+    elements: []
+    compositeelements: []
+    listelements: {}
+```
+
+add the body value under the body > values > en attribute (`nws-desc-body` in intellij)
+
+```
+|
+        <p>Hi, my fellow hipsters!</p>
+        <p>I know you&rsquo;ve been waiting for this announcement for a long time. JHipster 7 has been released! This is a BIG major version so I can&rsquo;t promise to cover every detail in the release, but I&rsquo;d like to share my favorite features with you.</p>
+        <p>Let&rsquo;s go for a quick overview.</p>
+        <h3>A few numbers to start</h3>
+        <p>22 months have passed since the last major release has been made <br />25 intermediate releases, one release every 3.5 weeks <br />3833 commits have been merged <br />2371 tickets/PR have been closed <br />8.2k GitHub stars and 613 contributors <br />The v7 release is for sure the biggest release made by the community.</p>
+        <h3>A piece of code</h3>
+        <pre><code class="language-javascript">
+          _install() {
+              return {
+                  installing() {
+                      if (this.skipClient) {
+                          if (!this.options['skip-install']) {
+                              if (this.clientPackageManager === 'yarn') {
+                                  this.log(chalk.bold(`\nInstalling generator-jhipster@${this.jhipsterVersion} locally using yarn`));
+                                  this.yarnInstall();
+                              } else if (this.clientPackageManager === 'npm') {
+                                  this.log(chalk.bold(`\nInstalling generator-jhipster@${this.jhipsterVersion} locally using npm`));
+                                  this.npmInstall();
+                              }
+                          }
+                      }
+                  },
+              };
+          }
+        </code></pre>
+        <p>&nbsp;</p>
+        <h3>JHipster Control Center</h3>
+        <p>JHipster Control Center (JHCC) is a Vue application that allows you to control and monitor all your JHipster applications from one place. It works with static discovery (by using static IP addresses) or with Eureka and Consul for service discovery. Kubernetes support is present but not fully available at this moment.</p>
+        <p>JHipster Control Center has all of the pages you used to have in your generated application such as metrics, configurations, and even Swagger-UI.</p>
+        <p>You can also decide to enable log tracking to read all of your logs from the JHipster Control Center (you will need to enable it in your application for security reasons).</p>
+        <p>JHipster Control Center is the recommended way to monitor your applications when you have multiple monoliths or microservices so you can monitor everything from one place. The admin-UI is best when you want to monitor everything from within the same app.&nbsp;</p>
+        <p>A JHipster application automatically embeds a JHipster Control Center docker-compose file to allow you to start quickly by using this command (you will need docker installed on your computer):</p>
+```
+
+Declare the content in the main descriptor (`baseDescriptorFragments` in intellij)
+```
+  contents:
+    - contents/nws001-descriptor.yaml
+```
+
 ## create the page 
 # Deploy a new version
 ```
