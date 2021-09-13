@@ -92,6 +92,14 @@ Please provide the bundle version comment (v0.0.1  - 2021-09-10T15:25:06+0000): 
 ➤ [I] | 2021-09-10 17-25-14 | Version v0.0.1 published
 ~~~
 ```
+## Deploy and Install the bundle
+```
+ent prj deploy
+```
+
+```
+ent prj install --conflict-strategy=OVERRIDE
+```
 
 # Add Pages components
 ## Create a PageModel
@@ -403,9 +411,26 @@ widgets:
     config: null
     pos: 8
 ```
-
-# Deploy a new version
+# Use the final version
+## Publish the new version
 ``` bash
 ent prj pbs-publish
 ```
-## Install the bundle
+```
+~~~
+➤ [I] | 2021-09-13 15-48-38 | Publishing the frontend to git
+Please provide the bundle version number (v0.0.1): v0.0.2
+Please provide the bundle version comment (v0.0.2  - 2021-09-13T13:48:46+0000): my second version
+No change detected; Should I proceed anyway? (y/n/q) y
+➤ [W] | 2021-09-13 15-48-54 | No new content was published: The remote repository is already up to date
+➤ [I] | 2021-09-13 15-48-55 | Version tags published
+~~~
+```
+## Deploy and Install the bundle
+```
+ent prj deploy
+```
+
+```
+ent prj install --conflict-strategy=OVERRIDE
+```
