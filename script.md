@@ -208,7 +208,7 @@ Create the Freemarker template
 touch content-page-with-code.ftl
 ```
 Add the ftl content (`pageModelFtl` in intellij)
-```
+``` html
 <#assign wp=JspTaglibs["/aps-core"]>
 <@wp.info key="systemParam" paramName="applicationBaseURL" var="appUrl" />
 
@@ -253,7 +253,7 @@ Add the ftl content (`pageModelFtl` in intellij)
 ```
 
 Declare the pageModel in the main descriptor (`baseDescriptorFragments` in intellij)
-```
+``` yaml
   pageModels:
     - pageModels/content_page_with_code-descriptor.yaml
 ```
@@ -265,12 +265,12 @@ mkdir contents && cd contents
 ```
 
 Create the news descriptor
-```
+``` bash
 touch nws001-descriptor.yaml
 ```
 
 Add the news content without body (`nws-desc` in intellij)
-```
+``` yaml
 id: NWS001
 typeCode: NWS
 description: "JHipster: What's Under the Hood?"
@@ -314,7 +314,7 @@ attributes:
 
 add the body value under the body > values > en attribute (`nws-desc-body` in intellij)
 
-```
+``` html
 |
         <p>Hi, my fellow hipsters!</p>
         <p>I know you&rsquo;ve been waiting for this announcement for a long time. JHipster 7 has been released! This is a BIG major version so I can&rsquo;t promise to cover every detail in the release, but I&rsquo;d like to share my favorite features with you.</p>
@@ -351,14 +351,61 @@ add the body value under the body > values > en attribute (`nws-desc-body` in in
 ```
 
 Declare the content in the main descriptor (`baseDescriptorFragments` in intellij)
-```
+``` yaml
   contents:
     - contents/nws001-descriptor.yaml
 ```
 
-## create the page 
-# Deploy a new version
+## create the page
+Create the pages folder
+``` bash
+mkdir pages && cd pages
 ```
+
+Create the pages descriptor
+``` bash
+touch blog_details-descriptor.yaml
+```
+
+Add the page content
+``` yaml
+code: blog_details
+parentCode: homepage
+titles:
+  en: Blog details
+  it: Blog details
+pageModel: content_page_with_code
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published
+widgets:
+  - code: logo
+    config: null
+    pos: 0
+  - code: navigation-menu
+    config: null
+    pos: 1
+  - code: search_form
+    config: null
+    pos: 2
+  - code: keycloak-login
+    config: null
+    pos: 3
+  - code: content_viewer
+    config:
+      contentId: 'NWS001'
+      modelId: 10002
+    pos: 4
+  - code: navigation-menu
+    config: null
+    pos: 8
+```
+
+# Deploy a new version
+``` bash
 ent prj pbs-publish
 ```
 ## Install the bundle
