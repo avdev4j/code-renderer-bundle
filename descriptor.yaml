@@ -9,5 +9,3 @@ components:
     - pages/blog_details-descriptor.yaml
   contents:
     - contents/nws001-descriptor.yaml
-  assets:
-    - assets/jhipster-logo/jhipster_logo-descriptor.yaml

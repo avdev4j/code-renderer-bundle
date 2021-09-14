@@ -60,12 +60,3 @@ attributes:
     elements: []
     compositeelements: []
     listelements: {}
-  - code: image
-    value: null
-    values:
-      en:
-        correlationCode: '1'
-        name: jhi_logo.png
-    elements: []
-    compositeelements: []
-    listelements: {}
