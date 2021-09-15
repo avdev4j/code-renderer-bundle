@@ -26,8 +26,19 @@ Create the bundle folder
 mkdir bundle && cd bundle
 ```
 
-# Add the first component
-## prismjs fragment
+# Add the main descriptor
+Start by creating the main descriptor.
+``` bash
+touch descriptor.yaml
+```
+In it add the following (command `baseDescriptor` in IntelliJ)
+```
+code: code-renderer
+description: Code renderer bundle
+components:
+```
+
+# Create the prismjs Fragment
 ``` bash
 mkdir fragments && cd fragments
 ```
@@ -47,69 +58,14 @@ guiCode: '
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-zc7WDnCM3aom2EziyDIRAtQg1mVXLdILE09Bo+aE1xk0AM2c2cVLfSW9NrxE5tKTX44WBY0Z2HClZ05ur9vB6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 '
 ```
-## main descriptor
-Start by creating the main descriptor.
-``` bash
-cd ..
-touch descriptor.yaml
-```
-In it add the following (command `baseDescriptor` in IntelliJ)
-```
-code: code-renderer
-description: Code renderer bundle
-components:
-```
+
 Add the fragments section in the main descriptor fragments (command `baseDescriptorFragments` in Intellij):
 ``` yaml
   fragments:
     - fragments/prismjs_cdn_inclusions-descriptor.yaml
 ```
 
-# Publish the bundle
-## Configure the publication system
-From the parent folder `code-renderer-bundle-parent` run the following command to publish the bundle to the Git repository
-```
-ent prj pbs-init
-```
-Then answer the question by providing the HTTPS Git repository link, your name and your email.
-For the others, leave the default values.
-```
-Please provide the URL of the publication repository: https://github.com/avdev4j/code-renderer-bundle-test.git
-Please provide the git user name: avdev4j
-Please provide the git email: ***@entando.com
-Initialized empty Git repository in /private/tmp/code-renderer-bundle-parent/bundle/.git/
-Should I enable the credentials cache for the publication of the frontend? (y/n/q) y
-Expiration in seconds? (86400):
-```
-## Publish on GitHub
-Run the command
-```
-ent prj pbs-publish
-```
-Provide a number version (add the 'v' prefix to follow the Git tag pattern)
-```
-~~~
-➤ [I] | 2021-09-10 17-24-55 | Publishing the frontend to git
-Please provide the bundle version number: v0.0.1
-Please provide the bundle version comment (v0.0.1  - 2021-09-10T15:25:06+0000): the first version
-[master 71a299a] the first version
- 2 files changed, 7 insertions(+)
- create mode 100644 descriptor.yml
- create mode 100644 fragments/prismjs_cdn_inclusions-descriptor.yaml
-➤ [I] | 2021-09-10 17-25-14 | Version v0.0.1 published
-~~~
-```
-## Deploy and Install the bundle
-```
-ent prj deploy
-```
-
-```
-ent prj install --conflict-strategy=OVERRIDE
-```
-
-# Add Pages components
-## Create a PageModel
+# Create the PageModel
 From the bundle folder
 ``` bash
 mkdir pageModels && cd pageModels
@@ -273,7 +229,7 @@ Declare the pageModel in the main descriptor (`baseDescriptorPageModels` in inte
     - pageModels/content_page_with_code-descriptor.yaml
 ```
 
-## Create the content
+# Create the content
 From the bundle folder
 ``` bash
 mkdir contents && cd contents
@@ -371,7 +327,7 @@ Declare the content in the main descriptor (`baseDescriptorContents` in intellij
     - contents/nws001-descriptor.yaml
 ```
 
-## create the page
+# Create the page
 From the bundle folder
 ``` bash
 mkdir pages && cd pages
@@ -424,23 +380,42 @@ Declare the page in the main descriptor (`baseDescriptorPages` in intellij)
   pages:
     - pages/blog_details-descriptor.yaml
 ```
-# Use the final version
-## Publish the new version
-From parent folder
-``` bash
+
+# Publish the bundle
+## Configure the publication system
+From the parent folder `code-renderer-bundle-parent` run the following command to publish the bundle to the Git repository
+```
+ent prj pbs-init
+```
+Then answer the question by providing the HTTPS Git repository link, your name and your email.
+For the others, leave the default values.
+```
+Please provide the URL of the publication repository: https://github.com/avdev4j/code-renderer-bundle-test.git
+Please provide the git user name: avdev4j
+Please provide the git email: ***@entando.com
+Initialized empty Git repository in /private/tmp/code-renderer-bundle-parent/bundle/.git/
+Should I enable the credentials cache for the publication of the frontend? (y/n/q) y
+Expiration in seconds? (86400):
+```
+## Publish on GitHub
+Run the command
+```
 ent prj pbs-publish
 ```
+Provide a number version (add the 'v' prefix to follow the Git tag pattern)
 ```
 ~~~
-➤ [I] | 2021-09-13 15-48-38 | Publishing the frontend to git
-Please provide the bundle version number (v0.0.1): v0.0.2
-Please provide the bundle version comment (v0.0.2  - 2021-09-13T13:48:46+0000): my second version
-No change detected; Should I proceed anyway? (y/n/q) y
-➤ [W] | 2021-09-13 15-48-54 | No new content was published: The remote repository is already up to date
-➤ [I] | 2021-09-13 15-48-55 | Version tags published
+➤ [I] | 2021-09-10 17-24-55 | Publishing the frontend to git
+Please provide the bundle version number: v0.0.1
+Please provide the bundle version comment (v0.0.1  - 2021-09-10T15:25:06+0000): the first version
+[master 71a299a] the first version
+ 2 files changed, 7 insertions(+)
+ create mode 100644 descriptor.yml
+ create mode 100644 fragments/prismjs_cdn_inclusions-descriptor.yaml
+➤ [I] | 2021-09-10 17-25-14 | Version v0.0.1 published
 ~~~
 ```
-## Deploy and Install the bundle
+# Deploy and Install the bundle
 ```
 ent prj deploy
 ```
